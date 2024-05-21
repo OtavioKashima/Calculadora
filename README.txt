@@ -1,0 +1,1 @@
+Como um professor viado da aula? Hoje você irá testemunhar essa especiaria apresentado por Guilherme Paglioni.

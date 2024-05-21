@@ -1,0 +1,129 @@
+<DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-Ua-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Calculadora</title>
+    </head>
+    <body>
+        <h1>Calculadora</h1>
+        <input type="number" id="numberA" placeholder="digita o primeiro número" />
+        <input type="number" id="numberB" placeholder="digita o segundo número" />
+        <button onclick="soma()">Soma</button>
+        <button onclick="subtrair()">Subtrair</button>
+        <button onclick="multiplicar()">Multiplicar</button>
+        <button onclick="dividir()">Dividir</button>
+
+        <h1>Calculadora de Área</h1>
+        <input type="number" id="numberC" placeholder="digita o primeiro número" />
+        <input type="number" id="numberD" placeholder="digita o segundo número" />
+        <input type="number" id="numberE" placeholder="digita o terceiro número (se existir)" />
+        <button onclick="areaq()">ÁreaQ</button>
+        <button onclick="areat()">ÁreaT</button>
+        <button onclick="areatp()">ÁreaTP</button>
+        
+
+        <script>
+            function soma() {
+                //Criando variaveis para receber os valores
+                let num1
+                let num2
+                let result
+                
+                //Capturando o valor dos inputs e inserindo nas variaveis
+                num1 = parseInt(document.getElementById('numberA').value)
+                num2 = parseInt(document.getElementById('numberB').value)
+                result = num1+num2
+
+                //Alerta para exibir o resultado
+                alert(`O resultado da soma é ${result}`)
+                }
+            
+            function subtrair() {
+                //Criando variaveis para receber os valores
+                let num1
+                let num2
+                let result
+                
+                //Capturando o valor dos inputs e inserindo nas variaveis
+                num1 = parseInt(document.getElementById('numberA').value)
+                num2 = parseInt(document.getElementById('numberB').value)
+                result = num1-num2
+
+                //Alerta para exibir o resultado
+                alert(`O resultado da subtração é ${result}`)
+                }
+
+            function multiplicar() {
+                //Criando variaveis para receber os valores
+                let num1
+                let num2
+                let result
+                
+                //Capturando o valor dos inputs e inserindo nas variaveis
+                num1 = parseInt(document.getElementById('numberA').value)
+                num2 = parseInt(document.getElementById('numberB').value)
+                result = num1*num2
+
+                //Alerta para exibir o resultado
+                alert(`O resultado da multiplicação é ${result}`)
+                }
+
+                function dividir() {
+                //Criando variaveis para receber os valores
+                let num1
+                let num2
+                let result
+                
+                //Capturando o valor dos inputs e inserindo nas variaveis
+                num1 = parseInt(document.getElementById('numberA').value)
+                num2 = parseInt(document.getElementById('numberB').value)
+                result = num1/num2
+
+                //Alerta para exibir o resultado
+                alert(`O resultado da divisão é ${result}`)
+                }
+
+            
+            function areaq() {
+                //Criando variaveis para receber os valores
+                let num1
+                let num2
+                let result
+                
+                //Capturando o valor dos inputs e inserindo nas variaveis
+                num1 = parseInt(document.getElementById('numberC').value)
+                num2 = parseInt(document.getElementById('numberD').value)
+                result = num1*num2
+
+                //Alerta para exibir o resultado
+                alert(`A área do triangulo é ${result}`)
+            }
+
+                function areat() {
+                //Criando variaveis para receber os valores
+                let num1
+                let num2
+                let result
+                
+                //Capturando o valor dos inputs e inserindo nas variaveis
+                num1 = parseInt(document.getElementById('numberC').value)
+                num2 = parseInt(document.getElementById('numberD').value)
+                result = (num1*num2)/2
+
+                //Alerta para exibir o resultado
+                alert(`A área do triangulo é ${result}`)
+                }
+
+                function areatp() {
+                    let baseMaior = parseInt(document.getElementById('numberC').value)
+                    let baseMenor = parseInt(document.getElementById('numberD').value)
+                    let altura = parseInt(document.getElementById('numberE').value)
+                    let result = ((baseMaior + baseMenor) * altura)/2
+                    alert(`A área do trapésio é ${result}`)
+                }
+        </script>
+        
+    </body>
+    </html>
