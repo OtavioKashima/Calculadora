@@ -14,6 +14,7 @@
         <button onclick="subtrair()">Subtrair</button>
         <button onclick="multiplicar()">Multiplicar</button>
         <button onclick="dividir()">Dividir</button>
+        <div id="resposta1"></div>
 
         <h1>Calculadora de Área</h1>
         <input type="number" id="numberC" placeholder="digita o primeiro número" />
@@ -22,6 +23,7 @@
         <button onclick="areaq()">ÁreaQ</button>
         <button onclick="areat()">ÁreaT</button>
         <button onclick="areatp()">ÁreaTP</button>
+        <div id="resposta2"></div>
         
 
         <script>
@@ -35,10 +37,8 @@
                 num1 = parseInt(document.getElementById('numberA').value)
                 num2 = parseInt(document.getElementById('numberB').value)
                 result = num1+num2
-
-                //Alerta para exibir o resultado
-                alert(`O resultado da soma é ${result}`)
-                }
+                document.getElementById('resposta1').innerHTML = `<h2>Sua resposta é : ${result} </h2>`
+            }
             
             function subtrair() {
                 //Criando variaveis para receber os valores
@@ -50,10 +50,8 @@
                 num1 = parseInt(document.getElementById('numberA').value)
                 num2 = parseInt(document.getElementById('numberB').value)
                 result = num1-num2
-
-                //Alerta para exibir o resultado
-                alert(`O resultado da subtração é ${result}`)
-                }
+                document.getElementById('resposta1').innerHTML = `<h2>Sua resposta é : ${result} </h2>`
+            }
 
             function multiplicar() {
                 //Criando variaveis para receber os valores
@@ -65,10 +63,8 @@
                 num1 = parseInt(document.getElementById('numberA').value)
                 num2 = parseInt(document.getElementById('numberB').value)
                 result = num1*num2
-
-                //Alerta para exibir o resultado
-                alert(`O resultado da multiplicação é ${result}`)
-                }
+                document.getElementById('resposta1').innerHTML = `<h2>Sua resposta é : ${result} </h2>`
+            }
 
                 function dividir() {
                 //Criando variaveis para receber os valores
@@ -80,9 +76,8 @@
                 num1 = parseInt(document.getElementById('numberA').value)
                 num2 = parseInt(document.getElementById('numberB').value)
                 result = num1/num2
+                document.getElementById('resposta1').innerHTML = `<h2>Sua resposta é : ${result} </h2>`
 
-                //Alerta para exibir o resultado
-                alert(`O resultado da divisão é ${result}`)
                 }
 
             
@@ -96,9 +91,8 @@
                 num1 = parseInt(document.getElementById('numberC').value)
                 num2 = parseInt(document.getElementById('numberD').value)
                 result = num1*num2
+                document.getElementById('resposta2').innerHTML = `<h2>Sua resposta é : ${result} </h2>`
 
-                //Alerta para exibir o resultado
-                alert(`A área do triangulo é ${result}`)
             }
 
                 function areat() {
@@ -111,9 +105,8 @@
                 num1 = parseInt(document.getElementById('numberC').value)
                 num2 = parseInt(document.getElementById('numberD').value)
                 result = (num1*num2)/2
+                document.getElementById('resposta2').innerText = result
 
-                //Alerta para exibir o resultado
-                alert(`A área do triangulo é ${result}`)
                 }
 
                 function areatp() {
@@ -121,7 +114,8 @@
                     let baseMenor = parseInt(document.getElementById('numberD').value)
                     let altura = parseInt(document.getElementById('numberE').value)
                     let result = ((baseMaior + baseMenor) * altura)/2
-                    alert(`A área do trapésio é ${result}`)
+                    document.getElementById('resposta2').innerText = result
+            
                 }
         </script>
         
